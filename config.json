@@ -1,0 +1,5 @@
+{
+  "rover_ip": "IP",
+  "rover_port": 8365,
+  "ollama_model": "modello"
+}
