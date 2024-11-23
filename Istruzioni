@@ -1,0 +1,13 @@
+Crea directory: rover-automation o come preferisci
+Crea immagine di partenza: docker build -t rover-controller .
+Crea rete per intterfacciamento con host: docker run --network="host" rover-controller
+
+
+Ricezione dati dal rover: Il WebSocket del rover invia informazioni sui sensori (es. ultrasuoni, IR, video).
+Invio a Ollama: Il sistema genera un prompt per Ollama basato sui dati ricevuti.
+Decisione AI: Ollama risponde con un comando JSON (es. velocità, direzione, angolo della camera).
+Comando al rover: Il sistema invia il comando al WebSocket del rover.
+Automazione continua: Il ciclo si ripete per mantenere il controllo autonomo.
+
+Con questo sistema, il rover può operare in modalità autonoma, 
+utilizzando Ollama per prendere decisioni basate sui dati sensoriali.
